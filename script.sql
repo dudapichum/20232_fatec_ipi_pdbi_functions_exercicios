@@ -1,3 +1,27 @@
+-- 1.3 Blocos anônimos para testar cada função:
+-- DO $$
+-- DECLARE
+--     v_saldo_teste NUMERIC (10, 2);
+-- BEGIN
+--     SELECT fn_consultar_saldo(1, 2) INTO v_saldo_teste;
+--     RAISE NOTICE 'Saldo da conta: %', v_saldo_teste;
+-- END;
+-- $$
+
+
+-- DO $$
+-- DECLARE
+--     v_transferencia_ok BOOLEAN;
+-- BEGIN
+--     SELECT fn_transferir(1, 2, 3, 4, 500) INTO v_transferencia_ok;
+--     IF v_transferencia_ok THEN
+--         RAISE NOTICE 'Transferência realizada com sucesso!';
+--     ELSE
+--         RAISE NOTICE 'Não foi possível realizar a transferência.';
+--     END IF;
+-- END;
+-- $$
+
 -- 1.2 Função fn_transferir:
 -- CREATE OR REPLACE FUNCTION fn_transferir(
 --     IN p_cod_cliente_remetente INT,
